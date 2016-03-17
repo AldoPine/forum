@@ -1,1 +1,9 @@
-<h1>Hola Mundo </h1>
+<% @post.each do |post| %>
+  <h2><%= link_to post.title, post %>
+    <p>
+      Published at
+    </p>
+    <%= time_ago_in_words(post.created_at) %>
+    <% end %>
+    <br>
+<%= link_to 'New Post', new_post_path %>
