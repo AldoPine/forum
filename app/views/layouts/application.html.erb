@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Forum</title>
+  <title>Forum Rails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div class="container">
+          <div class="header">
+                <div class="navbar navbar-default">
+                          <div class="navbar-header col-lg-6 col-md-8 col-sm-6 col-xs-8"><a class="navbar-brand" href="#">Forum Rails</a></div>
+                          <div class="col-lg-6 col-md-4 col-sm-6 col-xs-4">
+                            <ul class="nav navbar-nav navbar-right">
+                              <button type="button" name="button" class="btn btn-danger">Sign Up</button>
+                              <button type="button" name="button" class="btn btn-danger">Sign In    </button>
+                            </ul>
+                          </div>
+                </div>
+          </div>
+  </div>
+
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

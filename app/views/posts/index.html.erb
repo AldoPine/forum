@@ -1,9 +1,18 @@
-<% @post.each do |post| %>
-  <h2><%= link_to post.title, post %>
-    <p>
-      Published at
-    </p>
-    <%= time_ago_in_words(post.created_at) %>
-    <% end %>
-    <br>
-<%= link_to 'New Post', new_post_path %>
+<div class="container">
+      <div class="jumbotron">
+          <% @post.each do |post| %>
+            <h2 id="link"><%= link_to post.title, post %>
+              <p style="font-size: 0.4em; margin-top: 5px; margin-bottom: 40px;">Published at <%= post.user.email %> </p>
+              <p style="font-size: 0.4em; margin-bottom: 40px;"></p>
+              <% end %>
+              <br>
+          <%= link_to 'New Post', new_post_path %>
+        </div>
+
+
+<!-- SECTION FOOTER -->
+      <footer>
+            <hr></hr>
+            <p style="font-size: 1em;"class="text-center">Written and coded by <a href="#" class="name" style="font-size: 1em;">Aldo P.</a></p>
+      </footer>
+</div>
